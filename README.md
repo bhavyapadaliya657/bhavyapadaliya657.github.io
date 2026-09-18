@@ -82,23 +82,6 @@ FireLine/
 └── game.js      # Entire game engine (map gen, fire, AI, rendering, audio, HUD)
 ```
 
-### Architecture at a glance
-
-| Module | Location |
-|---|---|
-| Constants & tile types | `game.js` top section |
-| Map generation (BFS + random walls) | `generateRandomGrid()`, `findReachableCells()` |
-| Fire spread & intensity | `spreadFire()`, `updateFireIntensity()` |
-| Player movement & animation | `tryMove()`, `updatePlayerAnim()` |
-| Power-up system | `spawnPowerup()`, `collectPowerup()`, `extinguishArea()` |
-| Damage & invincibility | `checkFireDamage()`, `updateInvincibility()` |
-| Particle system | `spawnFireParticles()`, `updateParticles()` |
-| HUD & timers | `updateHUD()`, `updateTimer()`, `updateHearts()` |
-| Audio (Web Audio API) | `playTone()`, `playNoise()`, `sfx*()` helpers |
-| Game loop | `gameLoop()` via `requestAnimationFrame` |
-
----
-
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
